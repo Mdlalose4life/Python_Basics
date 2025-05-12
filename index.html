@@ -1,0 +1,228 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Python Basics</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.9.0/styles/a11y-dark.min.css">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.9.0/highlight.min.js"></script>
+    <script>hljs.highlightAll();</script>
+</head>
+<body>
+<div class="container">
+    <h1>Python Basics</h1>
+    <p>Hey there, future coder!</p>
+
+    <p>Welcome to Python Basics—your adventure into the world of programming. If you've ever wondered how games are made, how apps work, or how robots follow instructions, you're about to learn the secret behind it all: code—and Python is one of the best places to start.</p>
+        
+    <p>Python is like learning how to talk to computers using simple, friendly instructions. It's powerful (big companies like Google and Netflix use it!), but also super easy to pick up—even if you’ve never written a single line of code before.</p>
+    <p>In this course, we’re not just going to learn Python—we’re going to have fun with it. You’ll write your first program, make decisions with if statements, repeat actions with loops, and build smart chunks of code called functions. Along the way, we’ll explore the magical world of data structures like lists, and tuples. You’ll even learn how to handle mistakes (yes, computers make them too!) and build your very own objects.</p>
+        
+    <p>This isn’t just a lesson—it’s your first step to becoming a creator, a builder, a problem-solver. Whether you want to build the next big app or just learn a cool new skill, you’re in the right place.</p>
+        
+    <p>So grab your keyboard, bring your curiosity, and let’s start coding!</p>
+    <h2>Learning Objectives</h2>
+    <ul>
+        <li>What is Python</li>
+        <li>Hello, World </li>
+        <li>if/else, loops, functions</li>
+        <li>import & modules  </li>
+        <li>Data Structures: Lists, Tuples </li>
+        <li>Exceptions </li>
+    </ul>
+    <h2>What is Python</h2>
+    <p>Imagine you have a super cool toy car, but not just any car. This one listens when you talk to it! You can say things like <code>Go Left</code>, <code>Go Right</code>, or <code>Stop</code>, and the car actually does it. Pretty awesome, right?</p>
+
+    <p>Now imagine you want to talk to your computer in the same way—to give it instructions and have it do things for you. That’s where Python comes in. Python is a special language that lets you "talk" to computers using simple words and commands.</p>
+
+    <p>Instead of shouting commands at your toy car, with Python you type them. For example, you can write something like <code>print("Hello, world!")</code> and the computer will show the words you told it to. It's like being the boss of your own robot, and Python is the way you give your robot instructions.</p>
+
+    <p>So when you learn Python, you're really learning how to control computers—just like your toy car—but with even more superpowers!</p>
+
+
+    <h2>Hello, World</h2>
+    <p>Okay, let’s say you just got your toy car out of the box and you want to make sure it hears you. What’s the first thing you might say? Maybe just a friendly <code>Hello</code>, right?</p>
+
+    <p>In the world of Python, we do the same thing! The very first program most people write is called <strong>"Hello, World"</strong>. It’s like waving at your computer and making sure it can hear you when you speak Python.</p>
+
+    <p>To do that, you just write:</p>
+
+    <pre><code class="language-python">Print(Hello , World)</code></pre>
+        You must get
+    <pre><code class="language-python">Results: Hello , World</code></pre>
+
+
+    <p>The word <code>print</code> is your way of telling the computer, “Hey, say this out loud on the screen.” So when you run this code, your computer responds by showing: <strong>Hello, world!</strong></p>
+
+    <p>It’s kind of like telling your toy car, <code>Say Hello</code>, and it beeps back at you. This tiny program is your first conversation with the computer—and it's just the beginning!</p>
+
+    <h2>if/else, loops, and functions</h2>
+    <p>Now that your computer is listening, it’s time to teach it how to think and make decisions—just like you do!</p>
+
+    <p>First up: <strong><code>if/else</code></strong>. This is how Python makes choices. Imagine you're deciding what to wear. You might think: <code>if</code> it’s raining, wear a raincoat. <code>Else</code>, wear a t-shirt. That’s exactly how computers use <code>if/else</code>—to pick what to do based on what’s true.</p>
+    
+    <img src="Images/If_else_Diagram.png" alt="If_statement" style="width:690px;height:800px;">
+    <h3> The Flowchart (Diagram)</h3>
+    <p>Now look at the diagram above. Here's what’s happening, step by step:</p>
+        <ol>
+          <li><strong>Start</strong> – That’s where the program begins. Nothing has happened yet.</li>
+          <li><strong>Number</strong> – The program checks the value you gave (in our code, <code>number = 10</code>).</li>
+          <li><strong>Number &gt; 0?</strong> – This is the first question. Is the number greater than 0?</li>
+          <ul>
+            <li>If YES (which it is in our case), it goes down the left path and shows <code>"The number is positive"</code>.</li>
+            <li>If NO, it goes right and checks another question: <code>Number &lt; 0?</code></li>
+          </ul>
+          <li>If that were true instead, it would print <code>"The number is negative"</code>.</li>
+          <li>If neither condition is true, it would check if <code>number == 0</code> and print <code>"The number is zero"</code>.</li>
+          <li><strong>Stop</strong> – After making a decision and printing the result, the program finishes.</li>
+        </ol>
+    <pre><code class="language-python"> number = 10
+        if number > 0:
+            print(" The number is positive")
+        elif number < 0:
+            print("The number is negative")
+        elif number == 0:
+            print("The number is zero")</code></pre>
+
+        <h3>What Did We Get?</h3>
+        <p>Since <code>number = 10</code> is greater than 0, Python follows the left path in the flowchart and prints:</p>
+
+
+        <pre><code class="language-python">The number is positive</code></pre>
+            
+    <p>Next are <strong>loops</strong>. These are for doing something over and over. Like brushing your teeth—back and forth, again and again. In Python, you can use a loop to tell the computer: “Repeat this task 5 times” and it’ll do it without getting tired!</p>
+    <img src="Images/loop_diagram.png" alt="Loop_diagram" style="width:690px;height:800px;">
+    <h3>The Flowchart (Diagram)</h3> 
+    <p>Now look at the diagram above. Here's what’s happening, step by step:</p> 
+    <ol> 
+        <li><strong>Start</strong> – That’s where the program begins. The loop hasn’t started yet.</li> 
+        <li><strong>Enter Condition</strong> – The variable <code>i</code> is set to <code>0</code>, which is the first number in the <code>range(0, 99)</code>.</li> 
+        <li><strong>While Number &lt; 99?</strong> – This is the condition that gets checked every time before the loop runs.</li> 
+        <ul> 
+            <li>If YES, it means <code>i</code> is still less than 99, so it goes into the loop.</li> 
+            <li>If NO (which happens when <code>i</code> reaches 99), the loop ends and the program goes to Stop.</li> 
+        </ul> 
+        <li>Then it loops back to check again if <code>i &lt; 99</code>, repeating the process.</li>
+        <li><strong>Stop</strong> – Once <code>i</code> reaches 99, the condition fails, and the program exits the loop and stops.</li> 
+    </ol>
+    <pre><code class="language-python">for i in range(0, 99):
+        print(f"{i}", end=', ')</code></pre>
+        <h3>What Did We Get?</h3> <p>Since the loop starts from <code>i = 0</code> and continues until <code>i &lt; 99</code>, Python prints each number from 0 up to 98, separated by commas, all on the same line:</p> <pre><code class="language-python">0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, ..., 97, 98, </code></pre>
+    <p>And finally, we have <strong>functions</strong>. Think of them like little machines you build. You give them a name and tell them what to do. Then anytime you need that task done, you just call the function! It’s like saying, “Hey, do that thing we talked about.” It saves you from writing the same code again and again.</p>
+
+    <img src="Images/Functions_Diagram.png" alt="Loop_diagram" style="width:690px;height:800px;">
+
+    <h3> The Flowchart (Diagram)</h3> 
+    <p>Now look at the diagram above. Here's what’s happening, step by step:</p> 
+    <ol>
+        <li><strong>Start</strong> – This is where the program begins its journey.</li>
+        <li><strong>Main()</strong> – The first thing that runs is the <code>main()</code> function. It’s like the director of the show.</li>
+        <li><strong>Call sayHello()</strong> – Inside <code>main()</code>, we make a call to another function: <code>sayHello()</code>.</li> 
+        <li><strong>sayHello()</strong> – Now, the program jumps into the <code>sayHello()</code> function and runs whatever is inside it. In this case, it prints: <code>"Hello, World"</code>.</li> 
+        <li><strong>Return to main()</strong> – After <code>sayHello()</code> finishes, the program returns to <code>main()</code>.</li>
+        <li><strong>Stop</strong> – Once everything inside <code>main()</code> is done, the program ends. That’s a wrap!</li> </ol>
+
+    <pre><code class="language-python">def sayHello():
+    print("Hello, World")
+        
+def main():
+    sayHello()
+main()
+        </code></pre>
+        <h3> What Did We Get?</h3>
+        <p>When we run the program, Python starts with <code>main()</code>, which then calls <code>sayHello()</code>. Inside that function, it prints:</p>
+        <pre><code class="language-python">Hello, World</code></pre>
+        <p>Simple, clear, and clean! That's the magic of functions — they let you organize your code and run tasks step by step.</p>
+
+    <p>With <code>if/else</code>, loops, and functions, you can make your programs smart, repeatable, and super organized. You’re not just coding anymore—you’re starting to think like a programmer!</p>
+
+    <h2>Import & Modules</h2>
+    <p>Imagine you’re building a super cool robot. But instead of building every single part from scratch—like arms, wheels, or a camera—you grab ready-made parts from a toolbox. That’s what <strong>modules</strong> are in Python: toolboxes full of awesome features that you can reuse!</p>
+
+    <p>In Python, when you want to use one of those toolboxes, you just say <code>import</code>. For example, if you want to do some quick math magic, you can import the <code>math</code> module like this:</p>
+    
+    <pre><code>import math</code></pre>
+
+    <p>Then you can use it to do cool stuff, like:</p>
+
+    <pre><code>print(math.sqrt(25))  # This will print 5.0 (square root of 25!)</code></pre>
+
+    <p>Think of <code>import</code> like saying: “Hey Python, bring me the math toolbox—I’ve got numbers to crunch!”</p>
+
+    <p>There are tons of modules you can import—some are built into Python, and others you can download when you need them. They help you build bigger, cooler projects without having to reinvent the wheel every time. 🚀</p>
+
+
+    <h2>Data Structures: Lists & Tuples</h2>
+    <p>Alright, now that you've got your tools and you're ready to organize your stuff, let’s talk about two of the most useful ways to store things in Python: <strong>Lists</strong> and <strong>Tuples</strong>!</p>
+
+    <p>Imagine you have a bunch of toys—action figures, cars, and dolls—and you need a place to keep them all. A <strong>list</strong> is like a toy box where you can put all your toys in any order. You can even take toys out, add new ones, or move them around whenever you want!</p>
+
+    <p>In Python, a list looks like this:</p>
+
+    <pre><code>toys = ["action figure", "car", "doll"]</code></pre>
+
+    <p>You can even do things like:</p>
+
+    <pre><code>toys.append("robot")  # Add a robot to the list!</code></pre>
+
+    <p>Now, a <strong>tuple</strong> is a little different. It’s like a toy display case, where everything is carefully arranged. You can see the toys, but once they’re in there, they can’t be moved or changed. It’s like a "no touch" rule!</p>
+
+    <p>In Python, a tuple looks like this:</p>
+
+    <pre><code>toys = ("action figure", "car", "doll")</code></pre>
+
+    <p>So, to sum it up: use a <strong>list</strong> when you need to change things around, and use a <strong>tuple</strong> when you want things to stay exactly the same.</p>
+
+    <p>Both are great ways to keep your stuff organized in Python—whether it’s toys, numbers, or even names of your favorite characters!</p>
+
+    <h2>Exceptions</h2>
+<p>Sometimes, even the best plans go wrong! Imagine you’re making a peanut butter sandwich, and suddenly you realize—you’re out of peanut butter! That’s when you get an “exception”—a problem that stops everything from going as planned.</p>
+
+<p>In Python, exceptions are like those unexpected problems that happen when your code tries to do something that isn’t possible. For example, you might try to divide by zero or open a file that doesn’t exist. When that happens, Python throws an exception, like a big red flag saying “Hey, something went wrong!”</p>
+
+<p>But don’t worry, we can handle exceptions and tell Python what to do when things go wrong. That’s where <strong>try</strong> and <strong>except</strong> come in!</p>
+
+<p>Here’s how it works: You try to do something in your program, and if it causes an error, Python will "catch" it with the <code>except</code> part. It's like saying: “Hey, if the peanut butter jar is empty, just get the jelly and let’s keep going!”</p>
+
+<img src="Images/Execpt-Diagram.png" alt="Except_Diagram" style="width:690px;height:800px;">
+
+<pre><code class="language-python">def safe_print_integer():
+    number = "Some String"
+    try:
+        print("{:d}".format(number))
+    except (ValueError, TypeError):
+        print("Must be a number")
+safe_print_integer()</code></pre>
+<h3>What’s Happening in This Code?</h3> 
+<p>This code is all about safely trying something that might go wrong — and catching the error before it crashes the program.</p>
+<p>Let’s walk through it:</p> 
+<ol>
+    <li><code>number = "Some String"</code> – We're giving Python a value that is <strong>not</strong> a number (it's a string).</li>
+    <li><code>try:</code> – We’re about to try something risky: formatting the value as a number using <code>"{:d}".format()</code>.</li>
+    <li>But… <code>"Some String"</code> is <em>not</em> an integer, so Python raises an error — either a <code>ValueError</code> or <code>TypeError</code>.</li> 
+    <li><code>except (ValueError, TypeError):</code> – This catches the error and gracefully handles it by printing a friendly message.</li> </ol>
+
+    <h3>What Did We Get?</h3>
+    <p>Because <code>"Some String"</code> isn’t a valid integer, Python raises an error — but our <code>try</code>/<code>except</code> block catches it and prints:</p> 
+    <pre><code class="language-python">Must be a number</code></pre>
+    <p>The program didn’t crash. We caught the error with <code>except</code>. Clean, safe, and user-friendly!</p>
+
+
+<p>Exceptions help you handle problems without giving up on your program. They let you be prepared for the unexpected and keep things running smoothly—even when things don’t go according to plan!</p>
+
+<h2>Conclusion</h2>
+<p>And just like that, you’ve made it through the basics of Python! From talking to computers with simple commands, to organizing your data, and handling any hiccups along the way with exceptions, you've learned some key building blocks of programming.</p>
+
+<p>But here’s the best part: You’re just getting started! With Python, you’ve unlocked the power to create, solve problems, and make things that didn’t exist before. Whether you want to build websites, games, or robots, Python will be your trusty sidekick on that journey.</p>
+
+<p>Remember, programming is all about learning through practice, experimenting, and having fun along the way. Keep playing with your code, try new things, and don't be afraid to make mistakes—because that’s how you’ll grow.</p>
+
+<p>So, what’s next? Keep exploring, keep coding, and most importantly—keep being curious! The world of Python (and programming in general) is vast and exciting, and you're on the path to becoming a true coding wizard!</p>
+
+<p>Thanks for joining this adventure! Your coding journey has just begun—let’s see where Python takes you next!</p>
+
+</div>
+<script src="script.js"></script>
+</body>
+</html>
